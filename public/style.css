@@ -1,0 +1,17 @@
+body{
+    box-sizing: border-box;
+    background-color: #05363d;
+      /* background-color: #470f24; */
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=file] {
+
+    background: #05363d;
+}
+
+.selectBg {
+    background: #05363d;
+}

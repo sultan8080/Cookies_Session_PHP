@@ -1,0 +1,96 @@
+<?php
+define('__ROOT__', dirname(dirname(__FILE__)));
+$title = 'S\'inscrire';
+ob_start();
+?>
+
+<div class="box_sign col-xl-6 col-sm-10 col-md-8 p-5 mt-5 mx-auto shadow-lg row justify-content-center">
+    <div class="h3 mt-3 mb-5 text-center h3">
+        <i class="fas fa-user-plus"></i> <br>
+        Inscrivez-vous
+    </div>
+    <form action="" method="POST">
+        <div class="row">
+            <div class="form-group col-md-6 mb-3">
+                <label class="small mb-1" for="nom">Nom</label>
+                <input class="form-control" name="nom" type="text" />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+                <label class="small mb-1" for="prenom">Prenom</label>
+                <input class="form-control" name="prenom" type="text" />
+            </div>
+
+            <div class="form-group col-md-6 mb-3">
+                <label class="small mb-1" for="email">Email</label>
+                <input class="form-control" name="email" type="email" />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+                <label class="small mb-1" for="password">Mot de pass</label>
+                <input class="form-control" type="password" name="password" />
+            </div>
+
+            <div class="form-group col-md-6 mb-3">
+                <label class="small mb-1" for="prenom">Adresse</label>
+                <input class="form-control" name="prenom" type="text" />
+            </div>
+
+            <div class="form-group col-md-6 mb-3">
+                <label class="small mb-1" for="prenom">Code Postal</label>
+                <input class="form-control" name="prenom" type="text" />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+                <label class="small mb-1" for="prenom">Ville</label>
+                <input class="form-control" name="prenom" type="text" />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+                <label class="small mb-1" for="prenom">Phone</label>
+                <input class="form-control" name="prenom" type="text" />
+            </div>
+            <div class="form-group col-md-6 mb-3">
+                <label class="small mb-1" for="prenom">Télécharger votre photo</label>
+                <input class="form-control" name="prenom" type="file" />
+            </div>
+
+            <div class="form-group col-md-6 mb-3">
+                Sexe :
+                <div class="d-flex">
+                    <div class="form-check">
+                        <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label " for="flexRadioDefault1">
+                            Homme
+                        </label>
+                    </div>
+                    <div class="form-check mx-2">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Femme
+                        </label>
+                    </div>
+                    <div class="form-check mx-2">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Autre
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-check mt-1">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <small class="form-check-label text-white" for="gridCheck">
+                J'accepte les conditions générales
+            </small>
+        </div>
+        <div class="mt-4 col-6 mx-auto">
+            <input type="submit" name="signup" class="btn  btn-warning w-100" value="S'inscrire">
+        </div>
+    </form>
+
+    <div class="text-white text-center">
+        <small>Vous avez déjà un compte, <a class="text-warning" href="index.php">Connectez-vous</a> </small>
+    </div>
+</div>
+<?php
+$content = ob_get_clean();
+require_once(__ROOT__ . '/UserManagement/template.php');
+?>
