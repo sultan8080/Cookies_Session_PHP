@@ -2,7 +2,9 @@
 define('__ROOT__', dirname(dirname(__FILE__)));
 $title = 'S\'inscrire';
 ob_start();
+require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
 ?>
+
 
 <div class="box_sign col-xl-6 col-sm-10 col-md-8 p-5 mt-5 mx-auto shadow-lg row justify-content-center">
     <div class="h3 mt-3 mb-3 text-center h3">
@@ -41,16 +43,16 @@ ob_start();
                 <label class="small mb-1" for="adresse">Adresse</label>
                 <input class="form-control" name="adresse" type="text" />
             </div>
-
+            <div class="form-group col-md-6 mb-3">
+                <label class="small mb-1" for="codePost">Code Postal</label>
+                <input class="form-control" name="codePost" type="text" />
+            </div>
 
             <div class="form-group col-md-6 mb-3">
                 <label class="small mb-1" for="ville">Ville </label>
                 <input class="form-control" name="ville" type="text" />
             </div>
-            <div class="form-group col-md-6 mb-3">
-                <label class="small mb-1" for="phone">Phone</label>
-                <input class="form-control" name="phone" type="text" />
-            </div>
+          
             <div class="form-group col-md-6 mb-3">
                 <label class="small mb-1" for="photo">Télécharger votre photo</label>
                 <input class="form-control" name="photo" type="file" />
@@ -61,13 +63,13 @@ ob_start();
                 <div class="d-flex">
 
                     <div class="form-check mx-2">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <input class="form-check-input" type="radio" name="sexe" value="femme" checked>
                         <label class="form-check-label" for="flexRadioDefault2">
                             Femme
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input me-2" type="radio" name="sexe" value="homme" >
                         <label class="form-check-label " for="flexRadioDefault1">
                             Homme
                         </label>
