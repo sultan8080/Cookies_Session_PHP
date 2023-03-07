@@ -15,3 +15,15 @@ input[type=file] {
 .selectBg {
     background: #05363d;
 }
+
+.form-control{
+    color: rgb(135, 135, 135) !important;
+}
+
+.form-border{
+       border: 1px solid #fe03fe !important;
+}
+.display_msg{
+    background-color: #fe03fe;
+   color: white;
+}
