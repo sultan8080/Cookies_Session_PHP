@@ -35,9 +35,9 @@ class ConnectDB extends DatabaseInfo
     }
 }
 
-class DataClean
+class MyClass
 {
-    public static function DtClMethod($data)
+    public static function dataClean($data)
     {
         $data = trim($data);
         $data = stripslashes($data);

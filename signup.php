@@ -11,7 +11,7 @@ require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
         <i class="fas fa-user-plus"></i> <br>
         Inscrivez-vous
     </div>
-    <small id="msg_erreur" class="my-2 text-center py-2"> </small>
+    <small class="text-center my-2"> <span id="msg_erreur" class="p-1 px-3"> </span> <?php echo $errMsg; ?></small>
 
     <form action="" method="POST" name="signupform" onsubmit="return frontVerification()">
 
