@@ -11,9 +11,9 @@ require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
         <i class="fas fa-user-plus"></i> <br>
         Inscrivez-vous
     </div>
-    <small class="text-center my-2"> <span id="msg_erreur" class="p-1 px-3"> </span> <?php echo $errMsg; ?></small>
+    <small class="text-center my-2"> <span id="msg_erreur" class="p-1 px-3"> </span> <?php echo $errMsg; echo  $img_error; ?></small>
 
-    <form action="" method="POST" name="signupform" onsubmit="return frontVerification()">
+    <form action="" method="POST" name="signupform" onsubmit="return frontVerification()" enctype="multipart/form-data">
 
         <div class="row">
             <div class="form-group col-md-6 mb-3">
@@ -36,7 +36,7 @@ require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
 
             <div class="form-group col-md-6 mb-3">
                 <label class="small mb-1" for="confirmPassword"> Confirmez le mot de passe</label>
-                <input class="form-control" type="password" name="confirmPassword" minlength="6"  />
+                <input class="form-control" type="password" name="confirmPassword" minlength="6" />
             </div>
 
             <div class="form-group col-md-6 mb-3">
@@ -52,10 +52,12 @@ require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
                 <label class="small mb-1" for="ville">Ville </label>
                 <input class="form-control" name="ville" type="text" />
             </div>
-          
+
             <div class="form-group col-md-6 mb-3">
-                <label class="small mb-1" for="photo">Télécharger votre photo</label>
-                <input class="form-control" name="photo" type="file" />
+
+                <label for="formFileSm" class="form-label">Télécharger votre photo [ jpeg, jpg, png ] </label>
+                <input class="form-control" type="file" name="photo" id="formFile">
+
             </div>
 
             <div class="form-group col-md-6 mb-3">
@@ -69,7 +71,7 @@ require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input me-2" type="radio" name="sexe" value="homme" >
+                        <input class="form-check-input me-2" type="radio" name="sexe" value="homme">
                         <label class="form-check-label " for="flexRadioDefault1">
                             Homme
                         </label>
@@ -78,7 +80,7 @@ require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
                 </div>
             </div>
         </div>
-        
+
         <div class="mt-4 col-6 mx-auto">
             <input type="submit" name="signup" class="btn  btn-warning w-100" value="S'inscrire">
         </div>
@@ -90,6 +92,7 @@ require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
 </div>
 
 <?php
+
 $content = ob_get_clean();
 require_once(__ROOT__ . '/UserManagement/template.php');
 ?>

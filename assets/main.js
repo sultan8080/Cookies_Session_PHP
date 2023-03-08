@@ -6,10 +6,10 @@ function frontVerification() {
         fConfirmPassword = document.forms["signupform"]["confirmPassword"],
         fAdresse = document.forms["signupform"]["adresse"],
         fCodePoste = document.forms["signupform"]["codePost"],
-        fVille = document.forms["signupform"]["ville"],
-        fPhoto = document.forms["signupform"]["photo"];
+        fVille = document.forms["signupform"]["ville"];
+        // fPhoto = document.forms["signupform"]["photo"];
 
-    let allFields = new Array(fNom, fPrenom, fEmail, fPassword, fConfirmPassword, fAdresse, fCodePoste, fVille, fPhoto);
+    let allFields = new Array(fNom, fPrenom, fEmail, fPassword, fConfirmPassword, fAdresse, fCodePoste, fVille);
     let err_msg = document.getElementById("msg_erreur");
     let erreur = 0;
 
