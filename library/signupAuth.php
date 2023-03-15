@@ -55,10 +55,11 @@ if (isset($_POST['signup'])) {
     $fSexe = MyClass::dataClean($_POST['sexe']);
 
 
-    if (!$err = 1) {
+    if ($err !== 1) {
         // inserting data into table user
         $record = array($fNom, $fPrenom, $fEmail, $hashed_password, $fAdresse, $fCodePost, $fVille, $fPhoto, $fSexe);
         $connDb->insertData($record);
         $img_error = "<span class='p-1 px-3 bg-primary text-white'>  Votre compte utilisateur a été créé avec succès. Un administrateur vérifiera votre compte dans les meilleurs délais. </span>";
+        header("Refresh:3; url=index.php");
     }
 }
