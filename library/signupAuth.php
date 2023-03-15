@@ -24,7 +24,7 @@ if (isset($_POST['signup'])) {
     // email duplication check
     $queryEmail = $connDb->selectData("SELECT * FROM users WHERE email = '$fEmail'");
     if (sizeof($queryEmail) > 0) {
-        $errMsg = "<span class='p-1 px-3 display_msg'> E-mail déjà utilisé, utilisé un autre e-mail </span>";
+        $errMsg = "<span class='p-1 px-3 display_msg'> E-mail déjà utilisé, Veuillez utiliser un autre e-mail </span>";
         $err = 1;
     }
 
@@ -36,10 +36,12 @@ if (isset($_POST['signup'])) {
     if (strlen($fPhoto > 0)) {
         $file_parts = pathinfo($fPhoto);
         $allow_extension = array("JPEG", "jpeg", "jpg", "JPG", "PNG", "png");
+        // photo extension verify
         if (!in_array($file_parts['extension'], $allow_extension)) {
             $img_error = "<span class='p-1 px-3 display_msg'> L'extension de photo non valide </span>";
             $err = 1;
         } else if ($fPhotoSize > 200000) {
+            // photo size verify
             $img_error = "<span class='p-1 px-3 display_msg'> Votre photo est trop lourde (max 200kb) </span>";
             $err = 1;
         } else {

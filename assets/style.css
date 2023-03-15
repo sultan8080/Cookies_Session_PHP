@@ -24,6 +24,6 @@ input[type=file] {
        border: 1px solid #fe03fe !important;
 }
 .display_msg{
-    background-color: #fe03fe;
+   background-color: #fe03fe;
    color: white;
 }
