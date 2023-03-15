@@ -5,7 +5,7 @@ $connDb = new ConnectDB();
 $fnom = $fPrenom = $fPassword = $fEmail = $hashed_password = $fAdresse = $fCodePost = $fVille = $fPhoto = "";
 $errMsg = $img_error = "";
 
-$err;
+$err = "";
 
 if (isset($_POST['signup'])) {
 
@@ -55,7 +55,7 @@ if (isset($_POST['signup'])) {
     $fSexe = MyClass::dataClean($_POST['sexe']);
 
 
-    if ($err !== 1) {
+    if (!$err = 1) {
         // inserting data into table user
         $record = array($fNom, $fPrenom, $fEmail, $hashed_password, $fAdresse, $fCodePost, $fVille, $fPhoto, $fSexe);
         $connDb->insertData($record);
