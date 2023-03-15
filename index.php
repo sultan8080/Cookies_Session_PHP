@@ -4,38 +4,38 @@ $title = 'Se Connecter';
 ob_start();
 ?>
 
-<div class="box_sign col-lg-4 col-sm-8 col-md-6 p-5 mt-5 mx-auto shadow-lg row justify-content-center">
-    <div class="h3 mt-3 mb-5 text-center h3">
-        <i class="fas fa-user"></i> <br>
-        Se Connecter
+<div class="box_sign col-lg-6 col-sm-8 col-md-6 p-5 mt-5 mx-auto">
+    <div class="h3 mt-3 mb-5 text-center h1">
+        Veuillez choisir votre rôle d'utilisateur
+        <hr class="my-5">
     </div>
-    <form action="" method="POST">
-        <div class="form-group">
-            <label class="small mb-1" for="email">Adresse email</label>
-            <input class="form-control" name="email" type="email" />
-        </div>
-        <div class="form-group mt-3">
-            <label class="small mb-1" for="password">Mot de pass</label>
-            <input class="form-control" type="password" name="password" />
-        </div>
 
-        <div class="form-check mt-1">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <small class="form-check-label text-white" for="gridCheck">
-                se souvenir du mot de passe
-            </small>
-        </div>
-        <div class="mt-4">
-            <input type="submit" name="login" class="btn btn-warning w-100" value="Se Connecter">
-        </div>
-    </form>
+    <div class="row justify-content-center pb-5">
 
-    <div class="text-white">
-        <small>Vous n'avez pas de compte, <a class="text-warning" href="signup.php">inscrivez-vous</a> </small>
+        <div class="col-lg-4 col-12 text-center">
+            <a class="nav-link" href="login.php">
+                <img style="width: 15rem;" class="rounded-circle shadow-lg" src="profile/user.jpg" class="card-img-top" alt="user_photo">
+            </a>
+            <div class="mt-">UTILISATEUR</div>
+        </div>
+        <div class="col-lg-4 col-12  text-center">
+            <a class="" href="login.php">
+                <img style="width: 15rem;" class="rounded-circle shadow-lg" src="profile/admin.jpg" class="card-img-top" alt="user_photo">
+            </a>
+            <div class="mt-1">ADMIN</div>
+        </div>
     </div>
+
+
+
+
 </div>
 
-
+<script type="text/javascript">
+    function login() {
+        location.href = 'login.php';
+    }
+</script>
 <?php
 $content = ob_get_clean();
 require_once(__ROOT__ . '/UserManagement/template.php');

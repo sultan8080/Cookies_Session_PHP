@@ -1,29 +1,32 @@
-body{
-    box-sizing: border-box;
-    background-color: #05363d;
-      /* background-color: #470f24; */
+body {
+  box-sizing: border-box;
+  background-color: #05363d;
+  /* background-color: #470f24; */
 }
 
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=file] {
-
-    background: #05363d;
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='file'] {
+  background: #05363d;
 }
 
 .selectBg {
-    background: #05363d;
+  background: #05363d;
 }
 
-.form-control{
-    color: rgb(135, 135, 135) !important;
+.form-control {
+  color: rgb(135, 135, 135) !important;
 }
 
-.form-border{
-       border: 1px solid #fe03fe !important;
+.form-border {
+  border: 1px solid #fe03fe !important;
 }
-.display_msg{
-   background-color: #fe03fe;
-   color: white;
+.display_msg {
+  background-color: #fe03fe;
+  color: white;
+}
+
+a.img5:hover {
+  opacity: 0.3;
 }
