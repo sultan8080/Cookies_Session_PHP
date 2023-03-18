@@ -11,8 +11,10 @@ require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
         <i class="fas fa-user-plus"></i> <br>
         Inscrivez-vous
     </div>
-    <small class="text-center my-2"> <span id="msg_erreur" class="p-1 px-3"> </span> <?php echo $errMsg;
-                                                                                        echo  $img_error; ?></small>
+    <small class="text-center my-2"> <span id="msg_erreur" class="p-1 px-3">
+        </span> <?php echo $errMsg;
+                echo  $img_error; ?>
+    </small>
 
     <form action="" method="POST" name="signupform" onsubmit="return frontVerification()" enctype="multipart/form-data">
 
@@ -88,7 +90,7 @@ require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
     </form>
 
     <div class="text-white text-center">
-        <small>Vous avez déjà un compte, <a class="text-warning" href="login.php">Connectez-vous</a> </small>
+        <small>Vous avez déjà un compte, <a class="text-warning" href="index.php">Connectez-vous</a> </small>
     </div>
 </div>
 

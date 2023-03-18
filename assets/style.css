@@ -27,6 +27,15 @@ input[type='file'] {
   color: white;
 }
 
+.display_Smsg {
+  background-color: #28c102;
+  color: white;
+}
+
+.d_msg {
+  color: #fe03fe !important;
+}
+
 a.img5:hover {
   opacity: 0.3;
 }

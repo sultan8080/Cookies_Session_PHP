@@ -23,7 +23,7 @@ if (isset($_POST['signup'])) {
 
     // email duplication check
     $queryEmail = $connDb->selectData("SELECT * FROM users WHERE email = '$fEmail'");
-    if (sizeof($queryEmail) > 0) {
+    if (count((array)$queryEmail) > 0) {
         $errMsg = "<span class='p-1 px-3 display_msg'> E-mail déjà utilisé, Veuillez utiliser un autre e-mail </span>";
         $err = 1;
     }

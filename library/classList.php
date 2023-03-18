@@ -46,3 +46,27 @@ class MyClass
     }
 }
 
+
+class Session
+{
+    public function __construct()
+    {
+        $this->startSession();
+    }
+
+    private function startSession()
+    {
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+    }
+    public function setSession($key, $value)
+    {
+        $_SESSION[$key] = $value;
+    }
+    public function destroySession()
+    {
+        session_destroy();
+        header("Location:login.php");
+    }
+}
