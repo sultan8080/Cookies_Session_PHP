@@ -12,7 +12,7 @@ require_once(__ROOT__ . '/UserManagement/library/loginAuth.php');
         Se Connecter
     </div>
     <small class="text-center h5 w-75 display_msg"> <?php echo $errMsg; ?> </small>
-    <small class="text-center h5 w-75 display_Smsg"> <?php echo $msgSuccess; ?> </small>
+    <small class="text-center h5 w-75 display_Smsgcod"> <?php echo $msgSuccess; ?> </small>
 
     <form action="" method="POST">
         <div class="form-group">
@@ -26,12 +26,12 @@ require_once(__ROOT__ . '/UserManagement/library/loginAuth.php');
             <small class="d_msg p-1"> <?php echo $errMDP ?> </small>
         </div>
 
-        <div class="form-check mt-1">
+        <!-- <div class="form-check mt-1">
             <input class="form-check-input" type="checkbox" id="gridCheck">
             <small class="form-check-label text-white" for="gridCheck">
                 Se souvenir du mot de passe
             </small>
-        </div>
+        </div> -->
         <div class="mt-4">
             <input type="submit" name="login" class="btn btn-warning w-100" value="Se Connecter">
         </div>

@@ -40,9 +40,9 @@ if (isset($_POST['login'])) {
                     $msgSuccess = "Connexion Success !";
 
                     if ($userData->user_role == 'admin') {
-                        header("Refresh: 2; url=./dashboard/admin/admin.html");
+                        header("Refresh: 2; url=./tableauDeBord/admin/admin.html");
                     } else {
-                        header("Refresh: 2; url=./dashboard/user/dashboard.php");
+                        header("Refresh: 2; url=./tableauDeBord/user/tableauDeBord.php");
                     }
                 } else {
                     $errMsg = "Email ou Mot de passe incorrect";
