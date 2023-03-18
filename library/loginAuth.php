@@ -38,6 +38,12 @@ if (isset($_POST['login'])) {
                     $session = new Session;
                     $session->setSession("login", $fEmail);
                     $msgSuccess = "Connexion Success !";
+
+                    if ($userData->user_role == 'admin') {
+                        header("Refresh: 2; url=./dashboard/admin/admin.html");
+                    } else {
+                        header("Refresh: 2; url=./dashboard/user/dashboard.php");
+                    }
                 } else {
                     $errMsg = "Email ou Mot de passe incorrect";
                 }

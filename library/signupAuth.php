@@ -53,8 +53,6 @@ if (isset($_POST['signup'])) {
     }
 
     $fSexe = MyClass::dataClean($_POST['sexe']);
-
-
     if ($err !== 1) {
         // inserting data into table user
         $record = array($fNom, $fPrenom, $fEmail, $hashed_password, $fAdresse, $fCodePost, $fVille, $fPhoto, $fSexe);

@@ -7,7 +7,6 @@ ob_start();
 <div class="box_sign col-lg-6 col-sm-8 col-md-6 p-5 mt-5 mx-auto">
     <div class="h3 mt-3 mb-5 text-center h1">
         Veuillez choisir votre rôle d'utilisateur
-
     </div>
     <hr class="my-5">
     <div class="row justify-content-center pb-5">
@@ -32,5 +31,5 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-require_once(__ROOT__ . '/UserManagement/template.php');
+require(__ROOT__ . '../../template.php');
 ?>
