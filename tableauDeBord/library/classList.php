@@ -1,5 +1,5 @@
 <?php
-require_once(__ROOT__ . '/UserManagement/library/configDB.php');
+require_once(__ROOT__ . '/library/configDB.php');
 
 class ConnectDB extends DatabaseInfo
 {
@@ -70,7 +70,8 @@ class Session
         self::startSession();
         if (self::get("login") == false) {
             self::destroySession();
-            header("Location:index.php");
+            header("Location: /UserManagement/UserManagement/index.php");
+            // This location should be changed according to localhost root;
         }
     }
 

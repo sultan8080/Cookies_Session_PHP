@@ -1,6 +1,6 @@
 <?php
 define('__ROOT__', dirname(dirname(__FILE__)));
-$title = 'Se Connecter';
+$title = 'ADMIN';
 ob_start();
 ?>
 
