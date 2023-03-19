@@ -1,9 +1,5 @@
 <?php
 require_once('../library/classList.php');
-
-// $session = new Session;
-// $session->sessionCheck();
-// $admin = $session->get("login");
 ?>
 <!DOCTYPE html>
 <html lang="en">

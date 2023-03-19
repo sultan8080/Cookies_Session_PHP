@@ -1,7 +1,7 @@
 <?php
 require_once(__DIR__ . '/configDB.php');
 
-
+// Base de Donnée
 class ConnectDB extends DatabaseInfo
 {
     public function __construct()
@@ -36,6 +36,8 @@ class ConnectDB extends DatabaseInfo
     }
 }
 
+// CLASS DATA SECURITY
+
 class MyClass
 {
     public static function dataClean($data)
@@ -48,6 +50,7 @@ class MyClass
 }
 
 
+// CLASS SESSION
 class Session
 {
     public function __construct()
@@ -74,6 +77,7 @@ class Session
             header("Location:index.php");
         }
     }
+
 
     public static function get($key)
     {
