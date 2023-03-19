@@ -2,7 +2,7 @@
 define('__ROOT__', dirname(dirname(__FILE__)));
 $title = 'S\'inscrire';
 ob_start();
-require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
+require_once(__ROOT__ . '\UserManagement\library\signupAuth.php');
 ?>
 
 
@@ -97,5 +97,5 @@ require_once(__ROOT__ . '/UserManagement/library/signupAuth.php');
 <?php
 
 $content = ob_get_clean();
-require_once(__ROOT__ . '/UserManagement/template.php');
+require_once(__ROOT__ . '\UserManagement\\include\template.php');
 ?>

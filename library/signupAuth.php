@@ -1,6 +1,6 @@
 <?php
 
-require_once(__ROOT__ . '/UserManagement/library/classList.php');
+require_once(__ROOT__ . '\UserManagement\library\classList.php');
 $connDb = new ConnectDB();
 $fnom = $fPrenom = $fPassword = $fEmail = $hashed_password = $fAdresse = $fCodePost = $fVille = $fPhoto = "";
 $errMsg = $img_error = "";

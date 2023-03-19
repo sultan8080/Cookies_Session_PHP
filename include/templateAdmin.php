@@ -1,8 +1,10 @@
 <?php
-require_once(__ROOT__ . '/library/classList.php');
-$session = new Session;
-$session->sessionCheck();
-$admin = $session->get("login");
+require_once('../library/classList.php');
+
+
+// $session = new Session;
+// $session->sessionCheck();
+// $admin = $session->get("login");
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +19,8 @@ $admin = $session->get("login");
     <title> <?php if (isset($title)) {
                 echo $title;
             } ?> </title>
-    <link href="../css/styles.css" rel="stylesheet" />
+
+    <link href="../assets/css/styles.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 </head>
@@ -27,7 +30,7 @@ $admin = $session->get("login");
 
 
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand bg-dark" href="#"> <img src="sultan.png" width="" height="" alt="ADMIN">
+        <a class="navbar-brand bg-dark text-center" href="#"> <img src="../include/sultan.png" width="120px" height="auto" alt="ADMIN">
         </a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -123,11 +126,11 @@ $admin = $session->get("login");
     <!-- footer -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="../js/scripts.js"></script>
+    <script src="../assets/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-    <script src="../assets/datatables-demo.js"></script>
+    <script src="../assets/js/datatables-demo.js"></script>
 </body>
 
 </html>

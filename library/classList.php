@@ -1,5 +1,6 @@
 <?php
-require_once(__ROOT__ . '/UserManagement/library/configDB.php');
+require_once(__DIR__ . '/configDB.php');
+
 
 class ConnectDB extends DatabaseInfo
 {

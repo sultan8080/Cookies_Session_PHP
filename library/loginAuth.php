@@ -1,6 +1,7 @@
 <?php
 
-require_once(__ROOT__ . '/UserManagement/library/classList.php');
+require_once(__ROOT__ . '\UserManagement\library\classList.php');
+
 
 $fEmail = $fPassword = $err = $errMsg = $msgSuccess = $errEmail = $errMDP = "";
 $err = 0;
@@ -40,9 +41,9 @@ if (isset($_POST['login'])) {
                     $msgSuccess = "Connexion Success !";
 
                     if ($userData->user_role == 'admin') {
-                        header("Refresh: 2; url=./tableauDeBord/admin/adminDashboard.php");
+                        header("Refresh: 2; url=./admin/adminDashboard.php");
                     } else {
-                        header("Refresh: 2; url=./tableauDeBord/user/userDashboard.php");
+                        header("Refresh: 2; url=./user/userDashboard.php");
                     }
                 } else {
                     $errMsg = "Email ou Mot de passe incorrect";

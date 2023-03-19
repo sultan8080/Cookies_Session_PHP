@@ -64,5 +64,5 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-require_once(__ROOT__ . '/include/templateUser.php');
+require_once(__ROOT__ . '\include\templateUser.php');
 ?>
